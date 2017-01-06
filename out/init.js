@@ -1,13 +1,21 @@
+/// <reference path="../out/com/cahe/utils/MathUtils.d.ts" />
+/// <reference path="../out/com/cahe/utils/StringUtils.d.ts" />
 "use strict";
-var Init = (function () {
-    function Init() {
+const Mu = require("./com/cahe/utils/Math");
+const Su = require("./com/cahe/utils/String");
+class Init {
+    constructor() {
+        console.log(Mu.com.cahe.utils.MathUtils.SphereVolume(10000));
+        console.log(Su.com.cahe.utils.StringUtils.prefill());
+        Su.com.cahe.utils.sayHello();
     }
-    Init.getInstance = function () {
+    static getInstance() {
         if (Init._instance == null) {
             Init._instance = new Init();
         }
+        ;
         return Init._instance;
-    };
-    return Init;
-}());
+    }
+}
 exports.Init = Init;
+var i = Init.getInstance();
