@@ -1,8 +1,8 @@
 /// <reference path="../out/com/cahe/utils/MathUtils.d.ts" />
 /// <reference path="../out/com/cahe/utils/StringUtils.d.ts" />
 
-import * as Mu from "./com/cahe/utils/Math" ;
-import * as Su from "./com/cahe/utils/String" ;
+import * as Mu from "./com/cahe/utils/MathUtils" ;
+import * as Su from "./com/cahe/utils/StringUtils" ;
 
 export class Init {
 
