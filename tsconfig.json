@@ -1,12 +1,12 @@
 {
     "compilerOptions":{
-        "target": "es5",
+        "target": "es3",
         "module": "amd",
         "rootDir": "src",
         "outDir": "out"
     },
 
     "exclude": [
-        "./out", "./node_modules", "./out", "./typings"
+        "./out", "./node_modules", "./typings"
     ]
 }

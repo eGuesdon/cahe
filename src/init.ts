@@ -1,13 +1,15 @@
-import MathUtils = com.cahe.utils.MathUtils ;
+/// <reference path="./com/cahe/utils/MathUtils.ts" />
+/// <reference path="./com/cahe/utils/StringUtils.ts" />
+
 import StringUtils = com.cahe.utils.StringUtils;
-import sayHello = com.cahe.utils.sayHello;
 
 export class Init {
 
     private static _instance:Init ;
 
     private constructor(){
-        document.body.innerHTML = "bonjour";
+        console.log(StringUtils.prefill("Eric", "0", 10)) ;
+        document.body.innerHTML = StringUtils.prefill("Eric", "0", 10) ;
     }
 
     public static getInstance():Init{
