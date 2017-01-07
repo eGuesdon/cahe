@@ -4,17 +4,15 @@ var com;
     (function (cahe) {
         var utils;
         (function (utils) {
-            class MathUtils {
-                static SphereVolume(rayon) {
+            var MathUtils = (function () {
+                function MathUtils() {
+                }
+                MathUtils.SphereVolume = function (rayon) {
                     return (4 / 3) * Math.PI * rayon * rayon * rayon;
-                }
-            }
+                };
+                return MathUtils;
+            }());
             utils.MathUtils = MathUtils;
-            class UserModel {
-                constructor() {
-                }
-            }
-            utils.UserModel = UserModel;
         })(utils = cahe.utils || (cahe.utils = {}));
     })(cahe = com.cahe || (com.cahe = {}));
 })(com || (com = {}));

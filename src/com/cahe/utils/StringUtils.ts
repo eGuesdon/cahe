@@ -20,8 +20,8 @@ namespace com {
                 }
 
             }
-            export function sayHello():void{
-                console.log("je suis dans le module com.cahe.utils, je me nomme sayHello et je suis une fonction") ;
+            export function sayHello():string{
+                return "je suis dans le module com.cahe.utils, je me nomme sayHello et je suis une fonction" ;
             }
         }
     }

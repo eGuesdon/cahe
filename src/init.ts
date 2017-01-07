@@ -1,14 +1,13 @@
 import MathUtils = com.cahe.utils.MathUtils ;
 import StringUtils = com.cahe.utils.StringUtils;
-import UserModel = com.cahe.utils.UserModel;
+import sayHello = com.cahe.utils.sayHello;
 
 export class Init {
 
     private static _instance:Init ;
-    private _um : UserModel ;
 
     private constructor(){
-        
+        document.body.innerHTML = "bonjour";
     }
 
     public static getInstance():Init{

@@ -5,15 +5,7 @@ namespace com {
                 public static SphereVolume(rayon:number):number{
                     return (4/3) * Math.PI * rayon * rayon * rayon ;
                 }
-            }
-
-            export class UserModel{
-                
-                constructor(){
-
-                }
-
-            }   
+            }  
         }
     }
 }

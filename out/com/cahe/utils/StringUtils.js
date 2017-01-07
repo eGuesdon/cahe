@@ -4,23 +4,26 @@ var com;
     (function (cahe) {
         var utils;
         (function (utils) {
-            class StringUtils {
-                static prefill(stringChain, prefillChar, finalLength) {
-                    let len = stringChain.length;
+            var StringUtils = (function () {
+                function StringUtils() {
+                }
+                StringUtils.prefill = function (stringChain, prefillChar, finalLength) {
+                    var len = stringChain.length;
                     if (len >= finalLength) {
                         return stringChain;
                     }
-                    let gap = finalLength - len;
-                    let prefillChain = "";
-                    for (let i = 0; i < gap; i++) {
+                    var gap = finalLength - len;
+                    var prefillChain = "";
+                    for (var i = 0; i < gap; i++) {
                         prefillChain += prefillChar;
                     }
                     return prefillChain + stringChain;
-                }
-            }
+                };
+                return StringUtils;
+            }());
             utils.StringUtils = StringUtils;
             function sayHello() {
-                console.log("je suis dans le module com.cahe.utils, je me nomme sayHello et je suis une fonction");
+                return "je suis dans le module com.cahe.utils, je me nomme sayHello et je suis une fonction";
             }
             utils.sayHello = sayHello;
         })(utils = cahe.utils || (cahe.utils = {}));
