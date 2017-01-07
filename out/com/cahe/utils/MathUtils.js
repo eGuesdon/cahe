@@ -1,4 +1,3 @@
-"use strict";
 var com;
 (function (com) {
     var cahe;
@@ -11,6 +10,11 @@ var com;
                 }
             }
             utils.MathUtils = MathUtils;
+            class UserModel {
+                constructor() {
+                }
+            }
+            utils.UserModel = UserModel;
         })(utils = cahe.utils || (cahe.utils = {}));
     })(cahe = com.cahe || (com.cahe = {}));
-})(com = exports.com || (exports.com = {}));
+})(com || (com = {}));

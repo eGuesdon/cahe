@@ -1,9 +1,19 @@
-export module com.cahe.utils {
+namespace com {
+    export namespace cahe {
+        export namespace utils {
+            export class MathUtils {
+                public static SphereVolume(rayon:number):number{
+                    return (4/3) * Math.PI * rayon * rayon * rayon ;
+                }
+            }
 
-    export class MathUtils {
+            export class UserModel{
+                
+                constructor(){
 
-         public static SphereVolume(rayon:number):number{
-             return (4/3) * Math.PI * rayon * rayon * rayon ;
-         }
-     }
+                }
+
+            }   
+        }
+    }
 }

@@ -1,17 +1,14 @@
-/// <reference path="../out/com/cahe/utils/MathUtils.d.ts" />
-/// <reference path="../out/com/cahe/utils/StringUtils.d.ts" />
-
-import * as Mu from "./com/cahe/utils/MathUtils" ;
-import * as Su from "./com/cahe/utils/StringUtils" ;
+import MathUtils = com.cahe.utils.MathUtils ;
+import StringUtils = com.cahe.utils.StringUtils;
+import UserModel = com.cahe.utils.UserModel;
 
 export class Init {
 
     private static _instance:Init ;
+    private _um : UserModel ;
 
     private constructor(){
-        console.log(Mu.com.cahe.utils.MathUtils.SphereVolume(10000)) ;
-        console.log(Su.com.cahe.utils.StringUtils.prefill()) ;
-        Su.com.cahe.utils.sayHello() ;
+        
     }
 
     public static getInstance():Init{

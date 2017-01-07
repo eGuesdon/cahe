@@ -2,12 +2,14 @@
     "compilerOptions":{
         "target": "es6",
         "module": "commonjs",
-        "declaration": true,
+        "moduleResolution": "classic",
+        "newLine": "CRLF",
+        
         "rootDir": "src",
         "outDir": "out"
     },
 
     "exclude": [
-        "./out", "./node_modules", "./out"
+        "./out", "./node_modules", "./out", "typings"
     ]
 }

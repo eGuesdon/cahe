@@ -1,4 +1,3 @@
-"use strict";
 var com;
 (function (com) {
     var cahe;
@@ -13,7 +12,7 @@ var com;
                     }
                     let gap = finalLength - len;
                     let prefillChain = "";
-                    for (let i = 0; i < len; i++) {
+                    for (let i = 0; i < gap; i++) {
                         prefillChain += prefillChar;
                     }
                     return prefillChain + stringChain;
@@ -26,4 +25,4 @@ var com;
             utils.sayHello = sayHello;
         })(utils = cahe.utils || (cahe.utils = {}));
     })(cahe = com.cahe || (com.cahe = {}));
-})(com = exports.com || (exports.com = {}));
+})(com || (com = {}));
