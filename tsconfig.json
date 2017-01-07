@@ -7,6 +7,6 @@
     },
 
     "exclude": [
-        "./out", "./node_modules", "./out", "typings"
+        "./out", "./node_modules", "./out", "./typings"
     ]
 }
