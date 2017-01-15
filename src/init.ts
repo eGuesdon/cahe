@@ -1,22 +1,26 @@
-/// <reference path="./com/cahe/utils/MathUtils.ts" />
-/// <reference path="./com/cahe/utils/StringUtils.ts" />
 
-import StringUtils = com.cahe.utils.StringUtils;
+import { StringUtils } from "./com/cahe/utils/StringUtils";
+import { LayoutManager } from "./com/cahe/layout/LayoutManager";
+
 
 export class Init {
 
-    private static _instance:Init ;
+    private static _instance : Init ;
+    private lm : LayoutManager ;
 
-    private constructor(){
-        console.log(StringUtils.prefill("Eric", "0", 10)) ;
-        document.body.innerHTML = StringUtils.prefill("Eric", "0", 10) ;
+    protected constructor(){
+        this.init();
     }
 
-    public static getInstance():Init{
-        if (Init._instance == null) {
+    public static getInstance ():Init {
+        if (!Init._instance){
             Init._instance = new Init();
-        } ;
-        return Init._instance ;
+        }
+        return Init._instance;
+    }
+
+    private init (){
+        this.lm = LayoutManager.getInstance();
     }
 
 }

@@ -1,22 +1,18 @@
-/// <reference path="./com/cahe/utils/MathUtils.ts" />
-/// <reference path="./com/cahe/utils/StringUtils.ts" />
-define(["require", "exports"], function (require, exports) {
-    "use strict";
-    var StringUtils = com.cahe.utils.StringUtils;
-    var Init = (function () {
-        function Init() {
-            console.log(StringUtils.prefill("Eric", "0", 10));
-            document.body.innerHTML = StringUtils.prefill("Eric", "0", 10);
+"use strict";
+const LayoutManager_1 = require("./com/cahe/layout/LayoutManager");
+class Init {
+    constructor() {
+        this.init();
+    }
+    static getInstance() {
+        if (!Init._instance) {
+            Init._instance = new Init();
         }
-        Init.getInstance = function () {
-            if (Init._instance == null) {
-                Init._instance = new Init();
-            }
-            ;
-            return Init._instance;
-        };
-        return Init;
-    }());
-    exports.Init = Init;
-    var i = Init.getInstance();
-});
+        return Init._instance;
+    }
+    init() {
+        this.lm = LayoutManager_1.LayoutManager.getInstance();
+    }
+}
+exports.Init = Init;
+var i = Init.getInstance();

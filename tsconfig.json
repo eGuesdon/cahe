@@ -1,12 +1,21 @@
 {
     "compilerOptions":{
-        "target": "es3",
-        "module": "amd",
-        "rootDir": "src",
-        "outDir": "out"
+        "target": "es6",
+        "module": "commonjs",
+        "declaration": true,
+        "declarationDir": "./typings/cahe/",
+        "removeComments": true,
+        "moduleResolution": "classic",
+        "watch": true,
+        "outDir":"./out",
+        "sourceMap": false
     },
 
+    "include":[
+        "./src/**/*.ts"
+    ],
+
     "exclude": [
-        "./out", "./node_modules", "./typings"
+        "./out/**/*", "./node_modules", "./typings/**/*.d.ts"
     ]
 }
