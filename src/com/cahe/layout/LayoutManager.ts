@@ -10,7 +10,7 @@ import CC = require("./CoreContainer");
 import TC = require("./TopContainer");
 import MC = require("./MainContainer");
 
-import SU = require ('../utils/StringUtils') ;
+
 
 
 export class LayoutManager {
@@ -42,8 +42,7 @@ export class LayoutManager {
         this._topContainer = TC.TopContainer.getInstance() ;
         this._topContainer.displayContainer(this.coreContainerAsContainer) ;
 
-        // var _su : typeof SU.StringUtils = require('../utils/StringUtils');
-        // console.log(SU.StringUtils.prefillWith ("Eric", "Bonjour ")) ;
+        
 
     }
 
@@ -58,8 +57,6 @@ export class LayoutManager {
 
         this._mainContainer = MC.MainContainer.getInstance() ;
         this._mainContainer.displayContainer(this.coreContainerAsContainer) ;
-
-        // this.setTopContainer();
     }
 
 

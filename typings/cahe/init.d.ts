@@ -1,6 +1,7 @@
 export declare class Init {
     private static _instance;
-    private lm;
+    private _lm;
+    private _ss;
     protected constructor();
     static getInstance(): Init;
     private init();
