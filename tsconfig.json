@@ -1,6 +1,6 @@
 {
     "compilerOptions":{
-        "target": "es6",
+        "target": "es5",
         "module": "commonjs",
         "declaration": true,
         "declarationDir": "./typings/cahe/",
@@ -12,7 +12,7 @@
     },
 
     "include":[
-        "./src/**/*.ts"
+        "./src/**/*.ts","./src/**/*.css"
     ],
 
     "exclude": [

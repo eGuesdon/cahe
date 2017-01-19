@@ -1,6 +1,8 @@
+
+
+require("css!./css/SlideShow.css");
+
 export class SlideShow {
-
-
     public static LEFTRIGHT : string = "LeftRight";
     public static RIGHTLEFT : string = "RightLeft";
     public static TOPDOWN : string = "TopDown";
@@ -21,6 +23,7 @@ export class SlideShow {
     private _browsingType : string = SlideShow.CONTINUOUSBROWSING ;
     private _transitionType : string = SlideShow.LEFTRIGHT ;
     private _contentType : string = SlideShow.IMGCONTENTTYPE ;
+    private _hasBackground : boolean = false ;
 
 
     constructor (parentContainer? : HTMLElement , dataProvider? : string[], direction? : string, timelaps? : number) {
@@ -60,10 +63,15 @@ export class SlideShow {
         this._interval = setInterval( this.next.bind(this), this._timelaps );
     }
 
+    /**
+     * If the slide show has a background it is necessary to add a dedicated container
+     */
     private setContainer () : void {
         this._container = document.createElement ("div") ;
-        this._container.id = "slideshow" ;
+        this._container.id = "SlideShowWrapper" ;
         this._parentContainer.appendChild ( this._container );
+
+        this.setContentContainer () ;
     }
     
     /**

@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/eGuesdon/cahe#readme",
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1"
   },
   "dependencies": {
     "chai": "^3.5.0",

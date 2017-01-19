@@ -1,44 +1,69 @@
 "use strict";
-const CC = require("./CoreContainer");
-const TC = require("./TopContainer");
-const MC = require("./MainContainer");
-class LayoutManager {
-    constructor() {
+var CC = require("./CoreContainer");
+var TC = require("./TopContainer");
+var MC = require("./MainContainer");
+var LayoutManager = (function () {
+    function LayoutManager() {
         this.init();
     }
-    static getInstance(conf) {
+    LayoutManager.getInstance = function (conf) {
         if (!LayoutManager._instance) {
             LayoutManager._instance = new LayoutManager();
         }
         return LayoutManager._instance;
-    }
-    setTopContainer() {
+    };
+    LayoutManager.prototype.setTopContainer = function () {
         this._topContainer = TC.TopContainer.getInstance();
         this._topContainer.displayContainer(this.coreContainerAsContainer);
-    }
-    init() {
+    };
+    LayoutManager.prototype.init = function () {
         this._coreContainer = CC.CoreContainer.getInstance();
         this._coreContainer.displayContainer(document.body);
         this._mainContainer = MC.MainContainer.getInstance();
         this._mainContainer.displayContainer(this.coreContainerAsContainer);
-    }
-    get coreContainer() {
-        return this._coreContainer;
-    }
-    get coreContainerAsContainer() {
-        return this.coreContainer.container;
-    }
-    get mainContainer() {
-        return this._mainContainer;
-    }
-    get mainContainerAsContainer() {
-        return this._mainContainer.container;
-    }
-    get topContainer() {
-        return this.topContainer;
-    }
-    get topContainerAsContainer() {
-        return this._topContainer.container;
-    }
-}
+    };
+    Object.defineProperty(LayoutManager.prototype, "coreContainer", {
+        get: function () {
+            return this._coreContainer;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LayoutManager.prototype, "coreContainerAsContainer", {
+        get: function () {
+            return this.coreContainer.container;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LayoutManager.prototype, "mainContainer", {
+        get: function () {
+            return this._mainContainer;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LayoutManager.prototype, "mainContainerAsContainer", {
+        get: function () {
+            return this._mainContainer.container;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LayoutManager.prototype, "topContainer", {
+        get: function () {
+            return this.topContainer;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(LayoutManager.prototype, "topContainerAsContainer", {
+        get: function () {
+            return this._topContainer.container;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return LayoutManager;
+}());
 exports.LayoutManager = LayoutManager;
