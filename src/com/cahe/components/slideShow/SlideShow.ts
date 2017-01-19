@@ -27,10 +27,7 @@ export class SlideShow {
         this._parentContainer = parentContainer ;
         this._direction = direction ;
         this.dataProvider = dataProvider ;
-        this._timelaps = timelaps ;
-
-        this.setContainer();
-        
+        this._timelaps = timelaps ;    
     }
 
     // ==== Public methods ==== \\
