@@ -1,0 +1,36 @@
+export declare class SlideShow {
+    static LEFTRIGHT: string;
+    static RIGHTLEFT: string;
+    static TOPDOWN: string;
+    static DOWNTOP: string;
+    static FADE: string;
+    static CONTINUOUSBROWSING: string;
+    static DISCONTINUOUSBROWSING: string;
+    static IMGCONTENTTYPE: string;
+    private _dataProvider;
+    private _direction;
+    private _index;
+    private _previousIndex;
+    private _parentContainer;
+    private _container;
+    private _timelaps;
+    private _interval;
+    private _browsingType;
+    private _transitionType;
+    private _contentType;
+    private _hasBackground;
+    constructor(parentContainer?: HTMLElement, dataProvider?: string[], direction?: string, timelaps?: number);
+    next(direction?: number): number;
+    start(): void;
+    stop(): void;
+    private setPreviousIndex();
+    private setInterval();
+    private setTransition();
+    private setContainer();
+    private setContentContainer();
+    timeLaps: number;
+    transitionType: string;
+    browsingType: string;
+    contentType: string;
+    dataProvider: string[];
+}
