@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es6",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "typeRoots" : ["typings"],
+        "allowJs": false,
+        "watch": true,
+        "outDir":"app"
+    },
+    "include": [
+        "ts/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

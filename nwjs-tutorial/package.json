@@ -1,0 +1,24 @@
+{
+  "name": "nwjs-tutorial",
+  "version": "1.0.0",
+  "devDependencies": {
+    "nw": "^0.20.0-rc1",
+    "nw-builder": "^3.1.3",
+    "systemjs": "^0.20.0"
+  },
+  "description": "Nodejs + nwjs tutorial",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+  },
+  "author": "",
+  "license": "ISC",
+  "compilerOptions":{
+    "allowJs":true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eGuesdon/cahe.git"
+  }
+}
