@@ -1,32 +1,24 @@
-// import nw from 'nw.gui' ;
-// import Import from './Import' ;
-System.register([], function (exports_1, context_1) {
+System.register(["./WelcomeMsg"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var Main, main;
+    var WelcomeMsg_1, Main, main;
     return {
-        setters: [],
-        execute: function () {// import nw from 'nw.gui' ;
-            // import Import from './Import' ;
+        setters: [
+            function (WelcomeMsg_1_1) {
+                WelcomeMsg_1 = WelcomeMsg_1_1;
+            }
+        ],
+        execute: function () {
             Main = class Main {
-                // private i : Import.Import = new Import.Import() ;
                 constructor() {
                     this.doc = document;
                     this.body = this.doc.body;
+                    this.i = new WelcomeMsg_1.WelcomeMsg();
                     this.init();
-                    // nw.Window.get().showDevTools() ;
+                    nw.Window.get().showDevTools();
                 }
                 init() {
-                    let h1 = document.getElementById("welcomeMsg");
-                    let txt = "Document is : \n\n";
-                    for (let i in this.doc) {
-                        txt += i + " : " + this.doc[i] + " \n";
-                    }
-                    txt += "\n\n Body is : \n\n";
-                    for (let i in this.body) {
-                        txt += i + " : " + this.body[i] + " \n";
-                    }
-                    h1.innerText = txt;
+                    this.doc.getElementById("welcomeMsg").innerText = this.i.sayHello();
                 }
             };
             exports_1("Main", Main);

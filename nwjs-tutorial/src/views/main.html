@@ -8,12 +8,14 @@
     
 </head>
 <body>
-    <h1 id="welcomeMsg">Hello World</h1>
-    <script src="./app/systemJS.config.js"></script>
+    <p id="welcomeMsg"></p>
+    <script src="../app/systemJS.config.js"></script>
     <script>
-        System.import('nw.gui') ;
-        // System.import('app').catch(function(err){ alert(err)  ; console.error(err); });
-        nw.Window.get().showDevTools() ;
+        // System.import('nw.gui') ;
+        System.import('app').catch(function(err){ 
+            alert(err);
+        });
+        // nw.Window.get().showDevTools() ;
     </script>
 </body>
     

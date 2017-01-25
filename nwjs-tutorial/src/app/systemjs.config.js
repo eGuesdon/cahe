@@ -5,7 +5,7 @@
                 'npm':'node_modules/'
             },
             map:{
-                app : ''
+                app : '../app/'
             },
             packages:{
                 app:{

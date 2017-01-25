@@ -5,6 +5,7 @@
   "main": "views/main.html",
   "moduleResolution": "node",
   "sourceMap": true,
+  
   "window":{
     "title": "P2P",
     "icon": "link.png",
