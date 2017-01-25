@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "views/main.html",
+  "moduleResolution": "node",
+  "sourceMap": true,
   "window":{
     "title": "P2P",
     "icon": "link.png",
@@ -18,5 +20,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/nw.gui": "0.0.20"
+  }
 }

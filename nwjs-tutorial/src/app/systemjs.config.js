@@ -5,11 +5,13 @@
                 'npm':'node_modules/'
             },
             map:{
-                app : 'app'
+                app : ''
             },
             packages:{
-                app:'./app/Main.js',
-                defaultExtension:'js'
+                app:{
+                    main : './Main.js',
+                    defaultExtension:'js'
+                }
             }
         }
     )

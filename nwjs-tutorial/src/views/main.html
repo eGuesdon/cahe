@@ -9,9 +9,11 @@
 </head>
 <body>
     <h1 id="welcomeMsg">Hello World</h1>
+    <script src="./app/systemJS.config.js"></script>
     <script>
-        SystemJS.import('../systemJS.config.js');
-        SystemJS.import('../Main.js');
+        System.import('nw.gui') ;
+        // System.import('app').catch(function(err){ alert(err)  ; console.error(err); });
+        nw.Window.get().showDevTools() ;
     </script>
 </body>
     

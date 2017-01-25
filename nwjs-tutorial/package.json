@@ -14,11 +14,14 @@
   },
   "author": "",
   "license": "ISC",
-  "compilerOptions":{
-    "allowJs":true
+  "compilerOptions": {
+    "allowJs": true
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eGuesdon/cahe.git"
+  },
+  "dependencies": {
+    "@types/nw.gui": "0.0.20"
   }
 }
